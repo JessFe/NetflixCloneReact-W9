@@ -1,9 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+// import "swiper/css/pagination";
+// import "swiper/css/scrollbar";
 
 const MovieGallery = ({ title, searchQuery }) => {
   const [movies, setMovies] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -35,16 +41,35 @@ const MovieGallery = ({ title, searchQuery }) => {
   }
 
   return (
-    <Container fluid>
+    <>
       <h4 className="text-light mb-2 mt-4">{title}</h4>
-      <Row>
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={10}
+        slidesPerView={6}
+        navigation
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          992: {
+            slidesPerView: 4,
+          },
+          1200: {
+            slidesPerView: 6,
+          },
+        }}
+      >
         {movies.map((movie) => (
-          <Col className="gx-2 gy-1" key={movie.imdbID} sm={6} md={4} lg={3} xl={2}>
+          <SwiperSlide key={movie.imdbID}>
             <img src={movie.Poster} alt={movie.Title} className="gallery-img" />
-          </Col>
+          </SwiperSlide>
         ))}
-      </Row>
-    </Container>
+      </Swiper>
+    </>
   );
 };
 
