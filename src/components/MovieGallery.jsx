@@ -1,44 +1,50 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
-
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-// import "swiper/css/pagination";
-// import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
+import "bootstrap/dist/css/bootstrap.css";
+import GalleryPlaceholder from "./GalleryPlaceholder";
+import ErrorComponent from "./ErrorComponent";
 
 const MovieGallery = ({ title, searchQuery }) => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setIsLoading(true);
-      try {
-        const response = await fetch(`http://www.omdbapi.com/?apikey=a32f801a&s=${searchQuery}`);
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        setMovies(data.Search);
-      } catch (error) {
-        setError(error.message);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+  const fetchData = useCallback(async () => {
+    setIsLoading(true);
+    setError(null);
 
-    fetchData();
+    try {
+      const response = await fetch(`http://www.omdbapi.com/?apikey=a32f801a&s=${searchQuery}`);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      setMovies(data.Search);
+    } catch (error) {
+      setError(error.message);
+    }
+
+    setIsLoading(false);
   }, [searchQuery]);
 
+  const handleRetry = useCallback(() => {
+    fetchData();
+  }, [fetchData]);
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
+
   if (error) {
-    return <div>Error: {error}</div>;
+    return <ErrorComponent errorMessage={error} onRetry={handleRetry} />;
   }
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <GalleryPlaceholder />;
   }
 
   return (
