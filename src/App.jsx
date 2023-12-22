@@ -4,6 +4,7 @@ import MyNav from "./components/MyNav";
 import { Container } from "react-bootstrap";
 import TopBar from "./components/TopBar";
 import MyFooter from "./components/MyFooter";
+import MovieGallery from "./components/MovieGallery";
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
       <MyNav />
       <Container fluid>
         <TopBar />
+        <MovieGallery title="Trending Now" searchQuery="transformers" />
+        <MovieGallery title="Watch it Again" searchQuery="lord of the rings" />
+        <MovieGallery title="New Releases" searchQuery="goofy" />
       </Container>
       <MyFooter />
     </>
