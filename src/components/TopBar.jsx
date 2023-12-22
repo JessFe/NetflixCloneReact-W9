@@ -6,10 +6,10 @@ function TopBar() {
   return (
     <Container fluid>
       <Row className="align-items-center">
-        <Col md="auto">
+        <Col xs="auto">
           <h2 className="text-light mb-0">TV Shows</h2>
         </Col>
-        <Col md="auto">
+        <Col xs="auto">
           <Dropdown as={Button.Group}>
             <Dropdown.Toggle
               variant="dark"
@@ -26,7 +26,7 @@ function TopBar() {
             </Dropdown.Menu>
           </Dropdown>
         </Col>
-        <Col md="auto" className="text-light ms-auto">
+        <Col xs="auto" className="text-light ms-auto">
           <Grid className="fs-5 mx-3" />
           <Grid3x3 className="fs-5 mx-3" />
         </Col>

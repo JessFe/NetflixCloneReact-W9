@@ -18,19 +18,15 @@ body {
 }
 
 .text-gray {
-  color: var(--gray);
+  color: var(--gray) !important;
 }
 
 .border-gray {
-  border-color: var(--gray);
+  border-color: var(--gray) !important;
 }
 
 #logo-img {
   width: 100px;
-}
-
-a {
-  text-decoration: none;
 }
 
 .gallery-img {
@@ -69,4 +65,12 @@ a {
 
 footer a {
   font-size: 0.8rem;
+  text-decoration: none;
+}
+
+footer button:hover {
+  color: #fff !important;
+  background-color: transparent !important;
+  border: transparent !important;
+  padding-block: 4.5px !important;
 }

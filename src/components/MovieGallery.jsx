@@ -53,7 +53,7 @@ const MovieGallery = ({ title, searchQuery }) => {
       <Swiper
         modules={[Navigation, Autoplay]}
         spaceBetween={10}
-        slidesPerView={6}
+        slidesPerView={1}
         navigation
         autoplay={{
           delay: 3000,

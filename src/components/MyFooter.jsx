@@ -7,16 +7,16 @@ function MyFooter() {
     <footer className="mt-5 mb-2">
       <Container fluid className="text-gray">
         <Row className="justify-content-center mt-3">
-          <Col md={6}>
+          <Col xs={10} sm={8} lg={6} className="justify-content-center">
             <Row>
-              <Col className="mb-2">
+              <Col xs={10} className="mb-2 text-start">
                 <Facebook className="footer-icon me-3" />
                 <Instagram className="footer-icon me-3" />
                 <Twitter className="footer-icon me-3" />
                 <Youtube className="footer-icon" />
               </Col>
             </Row>
-            <Row className="row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+            <Row className="row-cols-2 row-cols-md-4 g-4">
               <Col className="footer-links">
                 <a href="#" className="d-block text-gray fw-normal mb-2">
                   Audio and Subtitles
@@ -66,14 +66,14 @@ function MyFooter() {
               </Col>
             </Row>
             <Row>
-              <Col className="mt-3">
+              <Col xs={12} className="mt-3">
                 <Button variant="outline-secondary" className="footer-button text-gray border-gray rounded-0 py-1 px-2">
                   Service Code
                 </Button>
               </Col>
             </Row>
             <Row>
-              <Col className="mt-2">
+              <Col xs={12} className="mt-2">
                 <small style={{ fontSize: "0.6rem" }}>© 1997-2023 Netflix, Inc.</small>
               </Col>
             </Row>
