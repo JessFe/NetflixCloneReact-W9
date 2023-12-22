@@ -12,7 +12,7 @@ function MyNav() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#" className="fw-bold">
+            <Nav.Link href="#" className="text-light fw-bold">
               Home
             </Nav.Link>
             <Nav.Link href="#" className="fw-bold">
@@ -29,10 +29,10 @@ function MyNav() {
             </Nav.Link>
           </Nav>
           <div className="d-flex align-items-center text-light">
-            <Search className="mx-2" />
-            <div className="fw-bold mx-2">KIDS</div>
-            <Bell className="mx-2" />
-            <PersonCircle className="mx-3" />
+            <Search className="fs-5 mx-2" />
+            <div className="small fw-bold mx-2">KIDS</div>
+            <Bell className="fs-5 mx-2" />
+            <PersonCircle className="fs-5 mx-3" />
           </div>
         </Navbar.Collapse>
       </Container>

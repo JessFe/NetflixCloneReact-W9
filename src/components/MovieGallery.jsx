@@ -42,7 +42,7 @@ const MovieGallery = ({ title, searchQuery }) => {
   }
 
   return (
-    <>
+    <div className="mx-2">
       <h4 className="text-light mb-2 mt-4">{title}</h4>
       <Swiper
         modules={[Navigation, Autoplay]}
@@ -76,7 +76,7 @@ const MovieGallery = ({ title, searchQuery }) => {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 };
 

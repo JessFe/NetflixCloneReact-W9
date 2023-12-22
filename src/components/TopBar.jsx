@@ -10,12 +10,14 @@ function TopBar() {
           <h2 className="text-light mb-0">TV Shows</h2>
         </Col>
         <Col md="auto">
-          <Dropdown as={Button.Group} className="border border-secondary px-2">
-            <Button variant="dark" className="bg-transparent px-0 py-0 pb-1">
+          <Dropdown as={Button.Group}>
+            <Dropdown.Toggle
+              variant="dark"
+              id="dropdown-custom-1"
+              className="bg-transparent border border-secondary rounded-0 py-1 px-2"
+            >
               Genres
-            </Button>
-
-            <Dropdown.Toggle variant="dark" className="bg-transparent px-0 ps-1 py-0" />
+            </Dropdown.Toggle>
 
             <Dropdown.Menu>
               <Dropdown.Item href="#">Comedy</Dropdown.Item>

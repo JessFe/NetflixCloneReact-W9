@@ -4,7 +4,7 @@ import { Facebook, Instagram, Twitter, Youtube } from "react-bootstrap-icons";
 
 function MyFooter() {
   return (
-    <footer className="mt-5">
+    <footer className="mt-5 mb-2">
       <Container fluid className="text-gray">
         <Row className="justify-content-center mt-3">
           <Col md={6}>
@@ -73,7 +73,7 @@ function MyFooter() {
               </Col>
             </Row>
             <Row>
-              <Col className="mt-3">
+              <Col className="mt-2">
                 <small style={{ fontSize: "0.6rem" }}>© 1997-2023 Netflix, Inc.</small>
               </Col>
             </Row>

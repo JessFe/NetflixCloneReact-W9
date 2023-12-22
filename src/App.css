@@ -10,6 +10,7 @@
 
 * {
   background-color: var(--dark-gray);
+  font-size: 0.95rem;
 }
 
 body {
@@ -25,7 +26,7 @@ body {
 }
 
 #logo-img {
-  width: 90px;
+  width: 100px;
 }
 
 a {
