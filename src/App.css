@@ -1,22 +1,28 @@
-/* .App {
-  text-align: center;
+:root {
+  --gray: #838383;
+  --dark-gray: #221f1f;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
 * {
-  background-color: #221f1f;
+  background-color: var(--dark-gray);
+}
+
+.text-gray {
+  color: var(--gray);
+}
+
+.border-gray {
+  border-color: var(--gray);
 }
 
 #logo-img {
   width: 90px;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer a {
+  font-size: 0.8rem;
 }

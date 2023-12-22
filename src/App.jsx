@@ -3,6 +3,7 @@ import "./App.css";
 import MyNav from "./components/MyNav";
 import { Container } from "react-bootstrap";
 import TopBar from "./components/TopBar";
+import MyFooter from "./components/MyFooter";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Container fluid>
         <TopBar />
       </Container>
+      <MyFooter />
     </>
   );
 }
