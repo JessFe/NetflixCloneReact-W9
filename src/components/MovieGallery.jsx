@@ -4,7 +4,6 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
-import "bootstrap/dist/css/bootstrap.css";
 import GalleryPlaceholder from "./GalleryPlaceholder";
 import ErrorComponent from "./ErrorComponent";
 
@@ -78,7 +77,11 @@ const MovieGallery = ({ title, searchQuery }) => {
       >
         {movies.map((movie) => (
           <SwiperSlide key={movie.imdbID}>
-            <img src={movie.Poster} alt={movie.Title} className="gallery-img" />
+            <img
+              src={movie.Poster !== "N/A" ? movie.Poster : "./assets/Goofy_transparent.webp"}
+              alt={movie.Title}
+              className="gallery-img"
+            />
           </SwiperSlide>
         ))}
       </Swiper>

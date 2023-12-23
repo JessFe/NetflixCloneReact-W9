@@ -10,10 +10,10 @@ function MyFooter() {
           <Col xs={10} sm={8} lg={6} className="justify-content-center">
             <Row>
               <Col xs={10} className="mb-2 text-start">
-                <Facebook className="footer-icon me-3" />
-                <Instagram className="footer-icon me-3" />
-                <Twitter className="footer-icon me-3" />
-                <Youtube className="footer-icon" />
+                <Facebook className="footer-icon fs-6 me-3" style={{ cursor: "pointer" }} />
+                <Instagram className="footer-icon fs-6 me-3" style={{ cursor: "pointer" }} />
+                <Twitter className="footer-icon fs-6 me-3" style={{ cursor: "pointer" }} />
+                <Youtube className="footer-icon fs-6" style={{ cursor: "pointer" }} />
               </Col>
             </Row>
             <Row className="row-cols-2 row-cols-md-4 g-4">

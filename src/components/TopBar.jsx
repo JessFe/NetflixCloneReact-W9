@@ -4,8 +4,9 @@ import { Grid, Grid3x3 } from "react-bootstrap-icons";
 
 function TopBar() {
   return (
-    <Container fluid>
-      <Row className="align-items-center">
+    <div className="top-bar-sticky">
+      {/* ^ qui sostituisco container con div per evitare spazi laterali */}
+      <Row className="align-items-center px-2 pb-1">
         <Col xs="auto">
           <h2 className="text-light mb-0">TV Shows</h2>
         </Col>
@@ -19,19 +20,25 @@ function TopBar() {
               Genres
             </Dropdown.Toggle>
 
-            <Dropdown.Menu>
-              <Dropdown.Item href="#">Comedy</Dropdown.Item>
-              <Dropdown.Item href="#">Drama</Dropdown.Item>
-              <Dropdown.Item href="#">Thriller</Dropdown.Item>
+            <Dropdown.Menu className="bg-darkgray border border-secondary dropdown-menu-dark">
+              <Dropdown.Item className="text-light custom-dropdown-item" href="#">
+                Comedy
+              </Dropdown.Item>
+              <Dropdown.Item className="text-light custom-dropdown-item" href="#">
+                Drama
+              </Dropdown.Item>
+              <Dropdown.Item className="text-light custom-dropdown-item" href="#">
+                Thriller
+              </Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Col>
         <Col xs="auto" className="text-light ms-auto">
-          <Grid className="fs-5 mx-3" />
-          <Grid3x3 className="fs-5 mx-3" />
+          <Grid className="fs-5 mx-3" style={{ cursor: "pointer" }} />
+          <Grid3x3 className="fs-5 mx-3" style={{ cursor: "pointer" }} />
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 }
 

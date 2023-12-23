@@ -1,8 +1,3 @@
-@import "swiper/css";
-@import "swiper/css/navigation";
-/* @import "swiper/css/pagination";
-@import "swiper/css/scrollbar"; */
-
 :root {
   --gray: #838383;
   --dark-gray: #221f1f;
@@ -25,10 +20,58 @@ body {
   border-color: var(--gray) !important;
 }
 
+.bg-darkgray {
+  background-color: var(--dark-gray) !important;
+}
+
+.pt-custom {
+  padding-top: 81px;
+}
+
+.custom-dropdown-item:active {
+  background-color: #e5191455 !important;
+  color: white !important;
+}
+
 #logo-img {
   width: 100px;
 }
 
+.top-bar-sticky {
+  position: sticky;
+  top: 81px; /* navbar */
+  z-index: 10;
+}
+
+/* --- SCROLLBAR --- */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--dark-gray);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--gray);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff000055;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray) var(--dark-gray); /* handle - track */
+}
+/* --- / SCROLLBAR --- */
+
+/* --- GALLERY --- */
 .gallery-img {
   width: 100%;
   height: 240px;
@@ -62,7 +105,9 @@ body {
   text-shadow: 3px 0 20px #ff7, -3px 0 20px #ff7;
   transform: scale(1.2);
 }
+/* --- / GALLERY --- */
 
+/* --- FOOTER --- */
 footer a {
   font-size: 0.8rem;
   text-decoration: none;
@@ -74,3 +119,65 @@ footer button:hover {
   border: transparent !important;
   padding-block: 4.5px !important;
 }
+/* --- / FOOTER --- */
+
+/* --- PROFILE P --- */
+main section#profile h1 {
+  font-size: 2.2rem;
+}
+
+main section#profile h1 + hr {
+  margin-top: 0.2rem;
+  margin-bottom: 1.2rem;
+}
+
+@media (min-width: 576px) {
+  main section#profile h1 {
+    font-size: 3rem;
+  }
+}
+
+main section#profile .dropdown-toggle:after {
+  margin-left: 1.5rem;
+}
+
+main section#profile a {
+  letter-spacing: 0.1rem;
+}
+
+main section#profile .form-check-input {
+  background-color: transparent;
+  border-color: var(--gray);
+  border-radius: 0;
+  width: 1.9rem;
+  height: 1.3rem;
+}
+
+@media (min-width: 365px) {
+  main section#profile .form-check-input {
+    width: 1.6rem;
+    height: 1.3rem;
+  }
+}
+
+@media (min-width: 450px) {
+  main section#profile .form-check-input {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}
+/* --- / PROFILE P --- */
+
+/* --- SETTINGS P --- */
+main section#settings {
+  background-color: #eee !important;
+}
+
+main section#settings hr {
+  margin-block: 0.5rem;
+}
+
+.bg-settings * {
+  background-color: #302d2d;
+}
+/* --- / SETTINGS P --- */
