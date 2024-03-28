@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Netflix Clone React
+My second attempt at replicating the well-known Netflix application has led to the creation of a fully responsive app, this time using React.
+I aimed to closely replicate the Netflix experience, and React was the perfect choice for its component-driven architecture and fast rendering.
+What makes this version stand out is the integration of live data from the Omdb API, which updates the galleries with the latest movies in real-time, ensuring the content is always fresh and engaging.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Technologies & Tools
+![HTML](https://img.shields.io/badge/HTML-282C34?logo=html5&logoColor=E34F26)
+![CSS](https://img.shields.io/badge/CSS-282C34?logo=css3&logoColor=1572B6)
+![JavaScript](https://img.shields.io/badge/JavaScript-282C34?logo=javascript&logoColor=F7DF1E)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-282C34?logo=bootstrap&logoColor=7952B3)
+![React](https://img.shields.io/badge/React-282C34?logo=react&logoColor=61DAFB)
+![VSCode](https://img.shields.io/badge/VSCode-282C34?logo=visualstudiocode&logoColor=007ACC)
 
-## Available Scripts
+## Preview
+<details>
+<summary>Project's gallery: Desktop - Click here!</summary>
+<img src="/preview/01.png" width="350"> <img src="/preview/02.png" width="350"> <img src="/preview/03.png" width="350">
+</details>
+<details>
+<summary>Project's gallery: Mobile - Click here!</summary>
+<img src="/preview/m01.png" height="450"> <img src="/preview/m02.png" height="450"> <img src="/preview/m03.png" height="450">
+</details>
+<details>
+<summary>Project's Video: Click here!</summary>
+<a href="https://github.com/JessFe/NetflixCloneReact-W9/raw/master/preview/2023-12-23-15-47-08.mp4">➡ Video Download</a>
+</details>
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+### Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Node.js and npm installed. Download them from [Node.js website](https://nodejs.org/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone this repository
+2. Navigate to the project directory
+3. Install the necessary packages: npm install
+4. Start the application: npm start
